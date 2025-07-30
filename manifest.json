@@ -1,0 +1,28 @@
+{
+  "name": "LinkedIn",
+  "description": "Posting data",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background":{
+    "service_worker":"background.js"
+  },
+  "icons":{
+    "16":"linkedin.png",
+    "32":"linkedin.png",
+    "64":"linkedin.png"
+  },
+  "permissions":[
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+    "content_scripts": [
+    {
+      "matches": ["*://www.linkedin.com/in/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
