@@ -25,7 +25,6 @@ window.addEventListener("load", () => {
           name,
           bio: bioLine,
           location,
-          about,
           url,
           connectionCount,
        
