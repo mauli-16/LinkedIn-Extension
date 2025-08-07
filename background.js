@@ -14,4 +14,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       delay += 5000; 
     });
   }
-});
+   else if (message.action === "openFeed") {
+    const url = message.url;
+    console.log("Opening feed:", url);
+
+    chrome.tabs.create({ url: url });
+  }
+
+
+})

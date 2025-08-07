@@ -20,5 +20,9 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 mongoose.connection.once("open", () => {
-  console.log("Connected to DB:", mongoose.connection.name);
+  console.log("Connected to DB:", mongoose.
+    
+    
+    
+    connection.name);
 });

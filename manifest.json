@@ -17,12 +17,17 @@
   "permissions":[
     "activeTab",
     "scripting",
-    "tabs"
+    "tabs",
+     "storage"
   ],
     "content_scripts": [
     {
-      "matches": ["*://www.linkedin.com/in/*"],
+       "matches": ["*://www.linkedin.com/in/*", "*://www.linkedin.com/feed/*"],
+     
       "js": ["content.js"]
     }
-  ]
+  ],
+  "host_permissions": [
+  "https://www.linkedin.com/feed/*"
+]
 }
